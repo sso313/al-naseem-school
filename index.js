@@ -1,4 +1,3 @@
-
 import { signIn, getSession } from './auth.js';
 
 const form = document.getElementById('login-form');
@@ -16,10 +15,9 @@ form.addEventListener('submit', async (event) => {
 
   try {
     await signIn(email, password);
-    message.textContent = 'تم تسجيل الدخول بنجاح. جارٍ تجهيز حسابك.';
+    location.replace('./dashboard.html');
   } catch (error) {
-    message.textContent = 'تعذر تسجيل الدخول. تحقق من البريد وكلمة المرور.';
-  } finally {
+    message.textContent = 'تعذر تسجيل الدخول. تحقق من البيانات وحالة الحساب.';
     button.disabled = false;
   }
 });
@@ -29,7 +27,7 @@ async function initialize() {
     const session = await getSession();
 
     if (session) {
-      message.textContent = 'أنت مسجل الدخول بالفعل.';
+      location.replace('./dashboard.html');
     }
   } catch (error) {
     message.textContent = 'تعذر الاتصال بخدمة الحسابات.';
