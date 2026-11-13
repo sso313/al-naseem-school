@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة التحكم | ثانوية النسيم</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#171914;color:#f1f0e8;font-family:Tahoma,Arial,sans-serif}
+header{background:#242720;padding:22px;border-bottom:1px solid #66734a}
+header h2{margin:0 0 8px;color:#c5d39d}
+header p{margin:0;color:#bbb}
+main{max-width:850px;margin:auto;padding:22px}
+h3{color:#c5d39d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:#242720;border:1px solid #414735;border-radius:12px;padding:18px}
+.card p{color:#bbb;line-height:1.7}
+button{background:#66734a;color:white;border:0;border-radius:8px;padding:12px 18px;font-size:15px}
+#logout{background:#713f3f}
+#status{color:#c5d39d}
+footer{text-align:center;color:#aaa;padding:25px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h2>ثانوية النسيم المختلطة</h2>
+<p>المنصة المدرسية</p>
+</header>
+<main>
+<h3 id="welcome">لوحة التحكم</h3>
+<p id="role"></p>
+<p id="status">جارٍ التحقق من الحساب...</p>
+<section class="grid" id="modules"></section>
+<br>
+<button id="logout">تسجيل الخروج</button>
+</main>
+<footer>تمت البرمجة والتطوير بواسطة شركة مُهاب | MOHAP</footer>
+<script type="module" src="./dashboard.js"></script>
+</body>
+</html>
